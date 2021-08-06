@@ -6,7 +6,14 @@
     <div>
       {% include controls.html %}
       <p style="font-size: 20px;">
-        {% if page.layout == 'home' %}<b>{% endif %}<a href="/">Home</a>{% if page.layout == 'home' %}</b>{% endif %} / {% if page.layout == 'blog' %}</b>{% endif %} <a href="/blog">Blog</a> {% if page.layout == 'blog' %}</b>{% endif %} {% if site.contact %} {% if page.layout == 'contact' %}<b>{% endif %}  / <a href="/contact">Contact</a>{% if page.layout == 'contact' %}</b>{% endif %} {% endif %}
+        {% for node in site.data.nav.pages %}
+            {% if page.title == node.name %}
+               <a href="{{node.url}}" class="active"><b>{{node.name}}</b></a>
+            {% else %}
+               <a href="{{node.url}}">{{node.name}}</a>
+            {% endif %}
+&nbsp;/&nbsp;   
+        {% endfor %}
       </p>
     <div>
     {{ content }}
