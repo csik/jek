@@ -4,7 +4,7 @@
         {% for node in site.data.nav.pages %}
             <p>
             {% if page.title == node.nav_name %}
-               <a href="{{node.url}}" class="active"><b>{{node.name}}</b></a>
+               <b>{{node.name}}</b>
             {% else %}
                <a href="{{node.url}}">{{node.name}}</a>
             {% endif %}
