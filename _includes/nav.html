@@ -1,6 +1,7 @@
  <div>
    <h2>
     <p>    
+     {{ page.nav_name }}
         {% for node in site.data.nav.pages %}
             <p>
             {% if page.nav_name == node.name %}
