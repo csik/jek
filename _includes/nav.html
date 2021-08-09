@@ -3,7 +3,7 @@
     <p>    
         {% for node in site.data.nav.pages %}
             <p>
-            {% if page.title == node.nav_name %}
+            {% if page.nav_name == node.name %}
                <b>{{node.name}}</b>
             {% else %}
                <a href="{{node.url}}">{{node.name}}</a>
