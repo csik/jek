@@ -10,7 +10,7 @@
             {% if page.nav_name == node.name %}
                <b>{{node.name}}</b>
             {% else %}
-               <a href="{{site.url}}{{site.baseurl}}/{{node.name | downcase }}.html">{{node.name}}</a>
+               <a href="{{site.url}}{{site.baseurl}}/{{node.nav_name | downcase }}.html">{{node.name}}</a>
             {% endif %}
 &nbsp;/&nbsp;   
         {% endfor %}
