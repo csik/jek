@@ -17,7 +17,7 @@
       </p>
       <p>
           {% for post in site.posts limit:1 %}
-     [{{post.name}}]({{ site.url }}{{ site.baseurl }}{{post.url}})
+        <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{post.name}}</a>
   {% endfor %}
       </p>
        <pre class="syntax">
