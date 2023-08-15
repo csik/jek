@@ -15,6 +15,8 @@
   Most recent TODO: 
   {% for post in site.posts limit:1 %}
      [{{post.name}}]({{ site.url }}{{ site.baseurl }}{{post.url}})
+
+     {{ site.url }}{{ site.baseurl }}{{ post.url }}">{{post.date | date: "%a, %b %d"}} – {{ post.title }}
   {% endfor %}
 
   </h2>
