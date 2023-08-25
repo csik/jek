@@ -17,8 +17,9 @@
       </p>
       <p>
         Most recent todos: 
-          {% for post in site.posts limit:3 %}
-        <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{post.date | date: "%a, %b %d"}} – {{ post.title }}</a> 
+         <ul>
+            {% for post in site.posts limit:3 %}
+            <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{post.date | date: "%a, %b %d"}} – {{ post.title }}</a> </li>
         <!-- <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{post.name}}</a> -->
   {% endfor %}
       </p>
