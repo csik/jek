@@ -16,8 +16,8 @@
         {% endfor %}
       </p>
       <p>
-        Most recent todo: 
-          {% for post in site.posts limit:1 %}
+        Most recent todos: 
+          {% for post in site.posts limit:3 %}
         <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{post.date | date: "%a, %b %d"}} – {{ post.title }}</a> 
         <!-- <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{post.name}}</a> -->
   {% endfor %}
